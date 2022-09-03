@@ -1,2 +1,31 @@
-@import './common';
-@import './example';
+// Подключаем стили
+@import './utils/visually-hidden';
+@import './utils/variables';
+@import './utils/brackpoints';
+@import './utils/mixins';
+
+@import './base/normalize-local';
+@import './base/reset';
+@import './base/common';
+@import './base/section-container';
+@import './base/link';
+@import './base/current';
+
+@import './components/button';
+@import './components/modal-for-contacts';
+
+@import './components/site-nav';
+@import './components/mobile-menu';
+//  HEAD
+
+@import './components/modal';
+//  main
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/products';
+@import './layouts/about';
+@import './layouts/gallery';
+@import './layouts/customer';
+@import './layouts/contacts';
+@import './layouts/footer';

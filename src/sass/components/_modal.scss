@@ -1,0 +1,115 @@
+.backdrop {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    transition: opacity 1250ms var(--time-function);
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    max-height: 450px;
+    padding: 45px 20px;
+    border-radius: 10px;
+    .webp & {
+        background-image:  url(../images/desktop/modal.webp);
+    }
+    .no-webp & {
+        background-image: url(../images/desktop/modal.png);
+    }
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    &__title {
+        font-family: var(--title-font);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.15;
+        letter-spacing: 0.04em;  
+        color:var(--title-text-color);
+        margin-bottom: 60px;
+        text-align: center;
+
+        &-baby {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 1.15;
+            letter-spacing: 0.04em;  
+            color: var(--title-text-color);  
+        }
+    }
+}
+
+.form-request__label {
+    display: flex;
+
+    color: var(--title-text-color);
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 25px;
+    text-transform: uppercase
+}
+
+.form-request__input {
+    margin-left: auto;
+    color: var(--title-text-color);
+    width: 80px;
+    border: 1px solid var(--title-text-color);
+    border-radius: 4px;
+}
+
+.form-request__button {
+    width: 209px;
+    height: 44px;
+    background: var(--white-color);
+    border-radius: 22px;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.31;
+    border: 1px solid var(--title-text-color);
+
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+
+
+    &:hover,
+    &:focus {
+        background-color: var(--button-hover-color);
+        border: transparent;
+    }
+}
+
+.modal__button--cross {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    // border: none;
+    border-radius: 50%;
+    fill: var(--title-text-color);
+    background-color: var(--white-color);
+    padding: 0;
+    cursor: pointer;
+}

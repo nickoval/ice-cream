@@ -1,0 +1,15 @@
+.link {
+    text-decoration-line: none;
+    color: inherit;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--time-function);
+
+
+    &:hover,
+    &:focus {
+        text-decoration-line: none;
+        color: #d41443;
+    }
+}

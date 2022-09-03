@@ -1,0 +1,41 @@
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 320px;
+
+  @include for-mobile-up {
+    padding: 0 20px;
+    max-width: 480px;
+  }
+
+  @include for-tablet-up {
+    max-width: $tablet;
+    padding: 0 32px;
+  }
+
+  @include for-desktop-up {
+    // max-width: 1200px;
+    max-width: $desktop;
+    padding: 0 16px;
+  }
+}
+
+.container-gallery {
+  margin: 0 auto;
+  padding: 0;
+
+  max-width: 480px;
+
+  @include for-tablet-up {
+    max-width: $tablet;
+  }
+
+  @include for-desktop-up {
+    max-width: $desktop;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
