@@ -11,7 +11,7 @@
 .gallery {
   background-image: linear-gradient(
     to bottom,
-    #fff5f6 28px,
+    var(--main-bg-color) 28px,
 
     var(--white-text-color) 28px,
     var(--white-text-color) 100%
@@ -19,7 +19,7 @@
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(
       to bottom,
-      #fff5f6 188px,
+      var(--main-bg-color) 188px,
 
       var(--white-text-color) 188px,
       var(--white-text-color) 100%
@@ -28,7 +28,7 @@
   @media screen and (min-width: 1200px) {
     background-image: linear-gradient(
       to bottom,
-      #fff5f6 89px,
+      var(--main-bg-color) 89px,
 
       var(--white-text-color) 89px,
       var(--white-text-color) 100%
