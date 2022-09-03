@@ -1,0 +1,109 @@
+.mobile-menu {
+    position: absolute;
+    padding-top: 60px;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--mobile-menu-bg-color);
+    display: block;
+
+    transform: translateY(0);
+    transition-property: transform;
+    transition-duration: 1250ms;
+    transition-timing-function: var(--time-function);
+
+
+    @media screen and (min-width: 768px) {
+        width: 254px;
+        height: 100vh;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: none;
+        }
+    
+
+    &.is-hidden {
+        
+        transform: translateY(-100%);
+    }
+
+    // @media screen and (min-width: 768px) {
+    //     &.is-hidden {
+        
+    //         transform: translateY(-300%);
+    //     }
+    // }
+ 
+    &__link {
+    display: block;
+    padding: 13px 0 11px 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+    color: var(--white-text-color);
+    border: 1px solid #E18298;  
+    }
+
+}
+.mobile-menu__header-button {
+    display: block;
+    background: var(--white-color);
+    border-radius: 22px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    border: none;
+    color: var(--title-text-color);
+    width: 209px;
+    height: 44px;
+    margin-bottom: 19px;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: transform 250ms var(--time-function),
+    color 250ms var(--time-function),
+    background-color 250ms var(--time-function);
+    
+    @media screen and (min-width: 768px) {
+        width: 186px;
+        } 
+
+    &:hover,
+    &:focus {
+        background-color: var(--button-hover-color);
+        border: transparent;
+        transform: scale(1.01);
+    }
+}
+
+.mobile-menu__button {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    fill: #d41443;
+    margin-left: auto;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--time-function);
+
+    @media screen and (min-width: 768px) {
+        margin-left: 293px;
+        }  
+
+    @media screen and (min-width: 1200px) {
+        display: none;
+        }  
+}
+
+.mobile-menu__button--close {
+    position: absolute;
+    fill: var(--white-color);
+    right: 20px;
+    top: 20px;
+}

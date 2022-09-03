@@ -1,0 +1,30 @@
+@mixin for-pixel-ratio-2 {
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+@mixin fonts ($fs:16px, $fw:400, $lh:1.5, $ls:0.04em) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin flexXY ($jc:center, $ai:center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin flexY ($ai:center) {
+  display: flex;
+  align-items: $ai;
+}
+
+@mixin flexX ($jc: center) {
+  display: flex;
+  justify-content: $ai;
+}

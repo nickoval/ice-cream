@@ -1,0 +1,85 @@
+.button {
+  font-family: var(--main-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  min-height: 18px;
+
+  font-weight: 700;
+
+  color: var(--title-text-color);
+  background-color: var(--white-color);
+
+  transition: transform 250ms var(--time-function),
+    color 250ms var(--time-function),
+    background-color 250ms var(--time-function),
+    box-shadow 250ms var(--time-function);
+    
+  // transition: transform 250ms var(--time-function),
+  //     color 250ms var(--time-function),
+  //     background-color 250ms var(--time-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-hover-color);
+    transform: scale(1.01);
+    box-shadow: 2px 2px 4px rgba(10, 10, 10, 0.1);
+  }
+
+  &--hero-red {
+    color: var(--white-color);
+    background-color: var(--title-text-color);
+
+    &:hover,
+    &:focus {
+      color: var(--title-text-color);
+      // background-color: var(--white-color);
+    }
+  }
+}
+
+.circle-button {
+  @include flexXY;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  color: var(--title-text-color);
+  // transition: transform 0.2s var(--time-function), background-color 0.2s var(--time-function), box-shadow 0.2s var(--time-function);
+  transition: background-color 0.2s var(--time-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--title-text-color);
+    color: var(--white-color);
+    // transform: scale(1.02);
+    // box-shadow: 2px 2px 4px rgb(10 10 10 / 10%);
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  &__hero {
+    width: 18px;
+    height: 18px;
+
+    @include for-desktop-up {
+      width: 26px;
+      height: 26px;
+    }
+
+    .icon-description-close {
+      display: none;
+    }
+
+    &.is-open .icon-description-close {
+      display: block;
+    }
+
+    &.is-open .icon-description {
+      display: none;
+    }
+  }
+}

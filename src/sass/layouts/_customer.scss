@@ -1,0 +1,237 @@
+.review {
+}
+.slider {
+	position: relative;
+
+		// .slider__item
+
+		&__item {
+		}
+
+		// .slider__image
+
+		&__image {
+			margin-bottom: 32px;
+			@media (min-width: 768px) {
+				margin-bottom: 20px;
+			}
+			@media (min-width: 1200px) {
+				margin-bottom: 16px;
+			}
+			img{
+				margin: 0 auto;
+			}
+		}
+
+		// .slider__body
+
+		&__body {
+			position: relative;
+			width: 280px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 16px;
+			padding-top: 43px;
+			background-color: var(--customer-bg-color);
+			@media (min-width: 768px) {
+				width: 620px;
+				margin-bottom: 4px;
+			}
+			@media (min-width: 1200px) {
+				width: 968px;
+				margin-bottom: 16px;
+			}	
+			}
+		
+
+		// .slider__text
+
+		&__text {
+			position: relative;
+			z-index: 2;
+			margin-right: auto;
+			margin-left: auto;
+			width: 180px;
+			padding-left: 15px;
+			padding-right: 8px;
+			padding-bottom: 9px;
+			font-family: var(--main-font);
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 2.55;
+			text-align: center;
+			background-image: repeating-linear-gradient(
+				to bottom,
+				transparent,
+				transparent 29px,
+				var(--customer-border-color) 29px,
+				var(--customer-border-color) 30px
+			);
+			@media (min-width: 768px) {
+				width: 608px;
+				padding-left: 51px;
+				padding-right: 55px;
+				font-size: 14px;
+				line-height: 2.16;
+			}
+			@media (min-width: 1200px) {
+				width: 822px;
+				padding-left: 72px;
+				padding-right: 74px;
+				font-size: 16px;
+				line-height: 1.86;
+			}
+		}
+
+			// .slider__footer
+
+			&__footer {
+		margin-bottom: 16px;
+		@media (min-width: 768px) {
+			margin-bottom: 32px;
+			font-size: 16px;
+		}
+		@media (min-width: 1200px) {
+			font-size: 20px;
+		}
+	}
+
+		// .slider__decor
+
+	&__decor {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 16px;
+
+		& span{
+		display: block;
+		width: 4px;
+		height: 4px;
+		background-color: #C7133E;
+		border-radius: 50%;
+			&::after, &::before {
+				position: absolute;
+				left: calc(50%);
+				transform: translateX(-50%);
+				content: '';
+				display: block;
+				width: 4px;
+				height: 4px;
+				background-color: #C7133E;
+				border-radius: 50%;
+			}
+			&::after{
+				transform: translateX(calc(-50% - 10px));
+			}
+			&::before {
+				transform: translateX(calc(-50% + 10px));
+			}
+		}
+	}
+		// .slider__author
+
+		&__author {
+			font-weight: 500;
+			font-size: 14px;
+			text-align: center;
+			line-height: 1.86;
+			@media (min-width: 768px) {
+				font-size: 16px;
+			}
+			@media (min-width: 1200px) {
+				font-size: 20px;
+			}
+		}
+}
+.icon {
+
+		// .icon--quote
+
+		&--quote {
+			position: absolute;
+			top: 30px;
+			left: 53px;
+			@media (min-width: 768px) {
+				top: 20px;
+				left: 6px;
+			}
+			@media (min-width: 1200px) {
+				top: 32px;
+				left: 72px;
+			}
+		}
+}
+
+/* Слайдер */
+.slick-slider{
+	// min-width: 0; 1
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{
+	display: none;
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.slick-dots li{
+	cursor: pointer;
+	&:not(:last-child) {
+		margin-right: 18px;
+	}
+}
+/* Активная точка */
+.slick-dots li.slick-active button{
+	background-color: var(--customer-icon-color);
+}
+/* Элемент точки */
+.slick-dots li button{
+	font-size: 0;
+	width: 12px;
+	height: 12px;
+	background-color: #d9d9d9;
+	border-radius: 50%;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	&:hover, &:focus {
+		outline: none;
+	}
+}
+
+.slick-dots li button[id="slick-slide-control00"]{
+	background-color: transparent;
+	background-image: url("../images/icon/start/home.svg");
+}
+
+
+#slick-slide-control00[aria-selected="true"]{
+		background-image: url("../images/icon/start/home_1.svg");
+	}

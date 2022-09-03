@@ -1,0 +1,27 @@
+.site-nav {
+
+    &__list {
+        display: none; 
+
+    @media screen and (min-width: 768px) {
+        display: none;
+     
+        }   
+    
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        margin-left: 128px; 
+        }   
+    }
+    
+    
+    &__item:not(:last-child) {
+        margin-right: 35px;   
+    }
+    &__link {
+        color: var(--white-color);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.31;
+    }
+}
